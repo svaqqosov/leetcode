@@ -1,0 +1,61 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "no-console": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "ignore"
+      }
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": false
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "ignoreComments": true,
+        "code": 100
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": [
+          "^@"
+        ]
+      }
+    ],
+    "no-restricted-properties": [
+      "error",
+      {
+        "object": "res",
+        "property": "status",
+        "message": "Please use the awesome uvr2-shared-response methods"
+      },
+      {
+        "object": "res",
+        "property": "send",
+        "message": "Please use the awesome vr2-shared-response methods"
+      }
+    ]
+  },
+  "globals": {
+    "ApiResponse": false,
+    "ApiError": false
+  }
+}
